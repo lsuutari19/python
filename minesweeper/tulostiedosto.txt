@@ -1,0 +1,8 @@
+
+ klikkaukset:2, aika:-1576497213 sekunttia, pvm: 16.12.19 klo: 13:53:35 kentan koko 10x10
+ klikkaukset:4, aika:-1576497266 sekunttia, pvm: 16.12.19 klo: 13:54:30 kentan koko 10x10
+ klikkaukset:2, aika:2 sekunttia, pvm: 16.12.19 klo: 13:55:39 kentan koko 10x10
+ klikkaukset:2, aika:-1576501576 sekunttia, pvm: 16.12.19 klo: 15:06:24 kentan koko 10x10
+ klikkaukset:12, aika:46 sekunttia, pvm: 14.10.20 klo: 13:57:22 kentan koko 10x10
+ klikkaukset:3, aika:4 sekunttia, pvm: 08.12.20 klo: 22:34:33 kentan koko 5x5
+ klikkaukset:2, aika:-1607459694 sekunttia, pvm: 08.12.20 klo: 22:34:57 kentan koko 5x5
