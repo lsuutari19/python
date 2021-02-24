@@ -100,13 +100,3 @@ def main():
 
 main()
 
-'''
-1/24/2021:
--Aloitin työn alusta esimerkkiohjelmien avulla!
-2/24/2021:
--poistelin välilyöntejä koodista ongelmaa kuitenkin
-ulommissa indentaatioissa?
-
-
-
-'''
