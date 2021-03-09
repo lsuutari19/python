@@ -5,6 +5,20 @@ import tkinter.font as TkFont
 #hello test for github commit from visual studio :)
 # learning git in vscode
 
+class myButton(Button):
+    def __init__(self, text):
+        self.text = text
+        super().__init__()
+        self['bg'] = 'white'
+        self['text'] = self.text
+        self['activebackground'] = 'darkgray'
+        self['width'] = 5
+        self['height'] = 2
+        if self.text == ("1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "0"):
+            self['command'] = lambda:press(int(text))
+        else:
+            self['command'] = lambda:press(text)
+
 result = ""
 
 def press(num):
@@ -47,24 +61,23 @@ if __name__ == "__main__":
     result_field.config(font=('Courier', 20), width=11)
     result_field.place(x=10, y=1)
 
-    #all the buttons
-    add = Button(text="+", command=lambda: press("+"), width=5, height=2, activebackground='darkgray', bg='white')
-    substract = Button(text="-", command=lambda: press("-"), width=5, height=2, activebackground='darkgray', bg='white')
-    division = Button(text="/", command=lambda: press("/"), width=5, height=2, activebackground='darkgray', bg='white')
-    multiply = Button(text="*", command=lambda: press("*"), width=5, height=2, activebackground='darkgray', bg='white')
+    add = myButton("+")
+    substract = myButton("-")
+    division = myButton("/")
+    multiply = myButton("*")
     clear = Button(text="C", command=cleared, width=5, height=2, activebackground='darkgray', bg='white')
     equal = Button(text="=", command=calculate, width=5, height=2, activebackground='darkgray', bg='white')
 
-    oneButton = Button(text="1", command=lambda: press(1), width=5, height=2, activebackground='darkgray', bg='white')
-    twoButton = Button(text="2", command=lambda: press(2), width=5, height=2, activebackground='darkgray', bg='white')
-    threeButton = Button(text="3", command=lambda: press(3), width=5, height=2, activebackground='darkgray', bg='white')
-    fourButton = Button(text="4", command=lambda: press(4), width=5, height=2, activebackground='darkgray', bg='white')
-    fiveButton = Button(text="5", command=lambda: press(5), width=5, height=2, activebackground='darkgray', bg='white')
-    sixButton = Button(text="6", command=lambda: press(6), width=5, height=2, activebackground='darkgray', bg='white')
-    sevenButton = Button(text="7", command=lambda: press(7), width=5, height=2, activebackground='darkgray', bg='white')
-    eightButton = Button(text="8", command=lambda: press(8), width=5, height=2, activebackground='darkgray', bg='white')
-    nineButton = Button(text="9", command=lambda: press(9), width=5, height=2, activebackground='darkgray', bg='white')
-    zeroButton = Button(text="0", command=lambda: press(0), width=5, height=2, activebackground='darkgray', bg='white')
+    oneButton = myButton("1")
+    twoButton = myButton("2")
+    threeButton = myButton("3")
+    fourButton = myButton("4")
+    fiveButton = myButton("5")
+    sixButton = myButton("6")
+    sevenButton = myButton("7")
+    eightButton = myButton("8")
+    nineButton = myButton("9")
+    zeroButton = myButton("0")
 
     
     #first row
