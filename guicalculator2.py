@@ -34,7 +34,6 @@ def calculate():
         summary = str(eval(result))
 
         equation.set(summary)
- #       result = ""
     except:
         equation.set("Error.")
         result = ""
@@ -44,7 +43,6 @@ def cleared():
     global result
     equation.set("")
     result = ""
-
 
 
 if __name__ == "__main__":
@@ -79,7 +77,6 @@ if __name__ == "__main__":
     nineButton = myButton("9")
     zeroButton = myButton("0")
 
-    
     #first row
     oneButton.place(x=10, y=58)
     twoButton.place(x=60, y=58)
