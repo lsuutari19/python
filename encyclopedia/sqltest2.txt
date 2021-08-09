@@ -2,20 +2,23 @@
 import mysql.connector
 from difflib import get_close_matches
 
+
 def est_connection():
     connection = mysql.connector.connect(
         user = "ardit700_student",
         password = "ardit700_student",
         host = "108.167.140.122",
         database = "ardit700_pm1database"
-)   
+    )   
     return connection
+
 
 def look_for_word(query, con):
     cursor = con.cursor()
     cursor.execute(query)
     results = cursor.fetchall()
     return results
+
 
 def translate(word, con):
     query = "SELECT * FROM Dictionary WHERE Expression = '{}' ".format(word)
@@ -26,11 +29,11 @@ def translate(word, con):
             temp += result[1] + "\n"
         return temp
     else:
-        query = "SELECT * FROM Dictionary"
+        query = "SELECT * FROM DICTIONARY"
         results = look_for_word(query, con)
         all_words = [item[0] for item in results]
         
-        if get_close_matches(word, all_words, cutoff = 0.7):
+        if get_close_matches(word, all_words, 0.7):
             yesno = input("Did you mean {}. Enter Y/N: ".format(get_close_matches(word, all_words, 0.7)[0]))
             if yesno == "Y":
                 results = look_for_word(get_close_matches(word, all_words, 0.7)[0], con)
@@ -43,9 +46,12 @@ def translate(word, con):
 
         
 
+            
+
+    
 
 
 
 user_input = input("Search for a name: ")
-con = est_connection()
-print( translate(user_input, con))
+print( translate(user_input, est_connection()) )
+

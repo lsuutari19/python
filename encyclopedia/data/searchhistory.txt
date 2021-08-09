@@ -1,0 +1,3 @@
+word; # of searches
+placeholder; 0
+

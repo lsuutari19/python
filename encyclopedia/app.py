@@ -7,9 +7,7 @@ from difflib import get_close_matches
 data = json.load( open( "data/data.json", "r" ) )
 
 def main():
-
     word = input("Enter a word: ").lower()
-
     if word in data:
         return(data[word])
 
@@ -30,6 +28,7 @@ def main():
 
     else:
         return("{} was not found. Please try again.".format(word))
+
 
 search = main()
 if type(search) == list:
